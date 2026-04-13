@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@200;300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ivory: #F8F4EE;
+  --black: #0D0B09;
+  --charcoal: #2C2416;
+  --gold: #C4A882;
+  --gold-light: #D4B896;
+  --stone: #E8E2D9;
+  --mid: #7A6E62;
+  --dark: #1A1410;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--ivory);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Typography ─── */
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+}
+.font-body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ─── Custom scrollbar ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb { background: var(--stone); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ─── Selection ─── */
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* ─── Smooth image loading ─── */
+img {
+  transition: opacity 0.4s ease;
+}
+
+/* ─── Gold shimmer line ─── */
+.gold-line {
+  height: 0.5px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+/* ─── Custom cursor dot ─── */
+.cursor-gold {
+  cursor: crosshair;
+}
+
+/* ─── Video hero ─── */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+/* ─── Marquee ─── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Page transition overlay ─── */
+.page-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--charcoal);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* ─── Hover underline gold ─── */
+.hover-gold-line {
+  position: relative;
+  display: inline-block;
+}
+.hover-gold-line::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 0.5px;
+  background: var(--gold);
+  transition: width 0.35s ease;
+}
+.hover-gold-line:hover::after {
+  width: 100%;
+}
+
+/* ─── Split text animation helper ─── */
+.char-reveal {
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* ─── Grain texture overlay ─── */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* ─── Form inputs ─── */
+.input-luxury {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid var(--stone);
+  padding: 12px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--charcoal);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.input-luxury:focus {
+  border-bottom-color: var(--gold);
+}
+.input-luxury::placeholder {
+  color: var(--mid);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  background: var(--charcoal);
+  border: none;
+  padding: 16px 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-primary:hover {
+  background: var(--darkBrown, #3D2B1A);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  background: transparent;
+  border: 0.5px solid var(--charcoal);
+  padding: 15px 36px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-ghost:hover {
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  background: var(--gold);
+  border: none;
+  padding: 16px 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+}
+
+.btn-white-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  background: transparent;
+  border: 0.5px solid rgba(255,255,255,0.4);
+  padding: 15px 36px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.btn-white-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
