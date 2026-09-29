@@ -1,0 +1,36 @@
+name: De Heeren extra images
+on:
+  push:
+    branches: [de-heeren-assets]
+    paths: [extra_urls.txt]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow requests
+      - run: |
+          python - <<'PY'
+          import requests, os
+          from PIL import Image
+          from io import BytesIO
+          os.makedirs("de-heeren/extra", exist_ok=True)
+          for line in open("extra_urls.txt"):
+              line=line.strip()
+              if not line or line.startswith("#"): continue
+              name,url=line.split(" ",1)
+              raw=requests.get(url,timeout=180).content
+              im=Image.open(BytesIO(raw)); im.load()
+              w,h=im.size; s=min(1,2600/max(w,h))
+              if s<1: im=im.resize((round(w*s),round(h*s)),Image.LANCZOS)
+              im.convert("RGB").save(f"de-heeren/extra/{name}.webp","WEBP",quality=85,method=6)
+              print(name, im.size)
+          PY
+      - run: |
+          git config user.name "assets-bot"; git config user.email "assets-bot@users.noreply.github.com"
+          git add -A; git commit -m "extra images" || true; git push
