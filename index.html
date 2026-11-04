@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Voorstel Rijschool KAS · Minterest</title>
+<meta name="description" content="Voorstel van Minterest voor Rijschool KAS: nieuwe website met online boeken, agenda, betalingen en leerlingportaal.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+<div class="deck">
+  <header class="top">
+    <img src="assets/minterest.png" alt="Minterest">
+    <div class="title">Voorstel voor <b>Rijschool KAS</b> · website en boekingssysteem</div>
+    <div class="tools"><span class="counter" id="counter">1 / 13</span><button class="tbtn" id="fs"><svg viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg><span>Volledig scherm</span></button></div>
+    <div class="prog" id="prog"></div>
+  </header>
+
+  <main class="stage" id="stage">
+
+  <!-- 1 cover -->
+  <section class="slide cover"><div class="in">
+    <img class="logo-big" src="assets/minterest.png" alt="Minterest">
+    <div><span class="sec">Voorstel · november 2026</span><h1 class="h">Rijschool KAS: van losse appjes naar een volgeboekte agenda.</h1></div>
+    <p class="lead">Eén nieuwe website waarop leerlingen zelf hun proefles plannen en afrekenen. Met daarachter één backend waarin Kas alles beheert: agenda, leerlingen, betalingen en tarieven.</p>
+    <div class="cover-meta"><span>Website op maat</span><span>Online boeken en betalen</span><span>Agenda en leerlingdossier</span><span>Leerlingportaal</span></div>
+    <div class="hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Klik op volgende of gebruik de pijltjestoetsen</div>
+  </div></section>
+
+  <!-- 2 analyse -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Wat we zagen op rijschoolkas.nl</span><h2 class="h">Sterke uitstraling, maar <em>alles loopt nog via de telefoon.</em></h2></div>
+    <div class="tiles two">
+      <div class="panel good"><h3>Wat goed is</h3><div class="list">
+        <div><i class="ck ok"></i><div><b>Duidelijke positionering</b><span>Dé motorrijschool voor Venlo en omstreken, met een jonge, gedreven instructeur.</span></div></div>
+        <div><i class="ck ok"></i><div><b>Transparante tarieven</b><span>AVD € 65 per uur en AVB-pakket € 699 staan gewoon op de site.</span></div></div>
+        <div><i class="ck ok"></i><div><b>Levende Instagram</b><span>Geslaagden, video's en een nieuw pand. Dat bewijs verdient meer dan een widget onderaan.</span></div></div>
+      </div></div>
+      <div class="panel bad"><h3>Wat het nu kost</h3><div class="list">
+        <div><i class="ck no"></i><div><b>Geen online inschrijven</b><span>"Online inschrijven is niet nodig, we regelen het persoonlijk." Elke lead is een appje, vaak terwijl Kas op de motor zit.</span></div></div>
+        <div><i class="ck no"></i><div><b>Geen agenda, geen betaling</b><span>Tijden afstemmen, pakketten factureren en betalingen nalopen gebeurt met de hand.</span></div></div>
+        <div><i class="ck no"></i><div><b>Geen inzicht in voortgang</b><span>Wie heeft hoeveel AVB-uren gehad, wie moet nog betalen, wie is examenklaar: dat zit in het hoofd of in losse chats.</span></div></div>
+      </div></div>
+    </div>
+  </div></section>
+
+  <!-- 3 nu vs straks -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Nu en straks</span><h2 class="h">Dezelfde leerling, <em>een heel andere route.</em></h2></div>
+    <div class="chainwrap">
+      <div class="chaincol"><small>Nu</small><div class="chain"><span>Bezoeker</span><i></i><span>WhatsApp</span><i></i><span>Heen en weer over tijden</span><i></i><span>Tikkie of factuur</span><i></i><span>Kas onthoudt alles</span></div></div>
+      <div class="chaincol new"><small>Straks</small><div class="chain"><span>Bezoeker</span><i></i><span>Kiest les en tijd</span><i></i><span>Betaalt via iDEAL</span><i></i><span>Staat in de agenda</span><i></i><span>Krijgt automatisch herinnering</span></div></div>
+    </div>
+    <div class="tiles">
+      <div class="tile"><i class="ico" data-i="clock"></i><div><b>24/7 boekbaar</b><p>Ook om 23:00, ook als Kas op de motor zit.</p></div></div>
+      <div class="tile"><i class="ico" data-i="zero"></i><div><b>Nul appjes over tijden</b><p>De agenda regelt het, de leerling kiest zelf.</p></div></div>
+      <div class="tile"><i class="ico" data-i="db"></i><div><b>Eén plek voor alles</b><p>Agenda, leerlingen en geld in één overzicht.</p></div></div>
+    </div>
+  </div></section>
+
+  <!-- 4 systeem -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Het plan</span><h2 class="h">Eén systeem, <em>drie kanten.</em></h2><p class="lead">Website, backend en leerlingportaal draaien op dezelfde database. Wat een leerling boekt, ziet Kas direct. Wat Kas in de agenda zet, ziet de leerling direct.</p></div>
+    <div class="sys">
+      <div class="node"><i class="ico" data-i="globe"></i><b>Website</b><span>rijschoolkas.nl, volledig op maat. Pakketten, proefles boeken, betalen.</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13M13 5l4 4-4 4M20 15H7M11 11l-4 4 4 4"/></svg></div>
+      <div class="node main"><i class="ico" data-i="db" data-fill="#2a7a72"></i><b>Backend</b><span>Agenda, aanvragen, leerlingen, betalingen, pakketten, automatische berichten.</span></div>
+      <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13M13 5l4 4-4 4M20 15H7M11 11l-4 4 4 4"/></svg></div>
+      <div class="node"><i class="ico" data-i="phone"></i><b>Mijn KAS</b><span>Eigen lessen, voortgang AVB en AVD, betalingen, verplaatsen.</span></div>
+    </div>
+  </div></section>
+
+  <!-- 5 features -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Wat erin zit</span><h2 class="h">Alles wat een rijschool <em>vandaag nodig heeft.</em></h2></div>
+    <div class="tiles">
+      <div class="tile"><i class="ico" data-i="cal"></i><div><b>Online boeken</b><p>Proefles, AVB-pakket en AVD-lessen. Leerling kiest uit de echte beschikbaarheid van Kas.</p></div></div>
+      <div class="tile"><i class="ico" data-i="agenda"></i><div><b>Agenda die klopt</b><p>Week- en dagweergave. Verplaatsen met één klik, leerling krijgt bericht.</p></div></div>
+      <div class="tile"><i class="ico" data-i="card"></i><div><b>iDEAL-betalingen</b><p>Via Mollie. Aanbetaling bij een proefles, termijnen bij een pakket.</p></div></div>
+      <div class="tile"><i class="ico" data-i="users"></i><div><b>Leerlingdossier</b><p>Lessen gehad, uren over, AVB en AVD status, examendatum, notities.</p></div></div>
+      <div class="tile"><i class="ico" data-i="chat"></i><div><b>Automatische berichten</b><p>Bevestiging direct, herinnering 24 uur vooraf, reviewverzoek na slagen.</p></div></div>
+      <div class="tile"><i class="ico" data-i="tag"></i><div><b>Tarieven zelf beheren</b><p>Prijs aanpassen of pakket toevoegen. Staat meteen live op de site.</p></div></div>
+    </div>
+  </div></section>
+
+  <!-- 6 demo website -->
+  <section class="slide" data-demo="site"><div class="in">
+    <div class="demo rev">
+      <div class="txt">
+        <span class="sec">Demo 1 · De nieuwe website</span>
+        <h2 class="h">Zo boekt een leerling <em>straks zelf.</em></h2>
+        <p class="lead">Volledig op maat in de stijl van KAS. Licht, stevig en gebouwd voor de telefoon. De demo hiernaast is echt klikbaar.</p>
+        <div class="bul"><div><i class="ck ok"></i>Home, pakketten, werkwijze, geslaagden, veelgestelde vragen</div><div><i class="ck ok"></i>Proefles boeken in vier stappen, afrekenen via iDEAL</div><div><i class="ck ok"></i>Mijn KAS: volgende les, voortgang en betalingen</div><div><i class="ck ok"></i>Prijzen komen rechtstreeks uit de backend</div></div>
+        <div class="ctas"><a class="cta" href="site/" target="_blank" rel="noopener">Bekijk de volledige demo<svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="cta ghost" href="site/boeken.html" target="_blank" rel="noopener">Direct naar boeken</a></div>
+      </div>
+      <div><div class="phone"><div class="scr"><iframe data-src="site/" title="Website demo" loading="lazy"></iframe></div></div><p class="frame-note">Scroll en klik in de telefoon, of open de demo op volledig scherm.</p></div>
+    </div>
+  </div></section>
+
+  <!-- 7 boeken in 4 stappen -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Boeken in vier stappen</span><h2 class="h">Van bezoeker naar <em>betaalde boeking in een minuut.</em></h2></div>
+    <div class="tiles four">
+      <div class="tile col"><span class="n">1</span><div><b>Kies je les</b><p>Proefles, AVB-pakket of AVD-les. Prijzen en inhoud uit de backend.</p></div></div>
+      <div class="tile col"><span class="n">2</span><div><b>Kies een moment</b><p>Vrije plekken uit de echte agenda van Kas. Bezette tijden zijn niet te kiezen.</p></div></div>
+      <div class="tile col"><span class="n">3</span><div><b>Gegevens</b><p>Naam, telefoon, ervaring. Genoeg om een bevestiging te sturen.</p></div></div>
+      <div class="tile col"><span class="n">4</span><div><b>Afrekenen</b><p>iDEAL, Apple Pay of twee termijnen. Daarna direct bevestiging op WhatsApp.</p></div></div>
+    </div>
+    <div class="tiles">
+      <div class="tile"><i class="ico" data-i="shield"></i><div><b>Minder no-shows</b><p>Betaald vooruit en een herinnering 24 uur vooraf. Een lege lesplek kost nu € 65.</p></div></div>
+      <div class="tile"><i class="ico" data-i="wa"></i><div><b>Direct bevestigd</b><p>Route, wat meenemen en een knop om te verplaatsen. Zonder dat Kas iets typt.</p></div></div>
+      <div class="tile"><i class="ico" data-i="link"></i><div><b>Meteen in de agenda</b><p>De boeking staat in de backend voordat de leerling zijn telefoon weglegt.</p></div></div>
+    </div>
+  </div></section>
+
+  <!-- 8 demo backend -->
+  <section class="slide" data-demo="backend"><div class="in">
+    <div class="demo">
+      <div class="txt">
+        <span class="sec">Demo 2 · De backend van Kas</span>
+        <h2 class="h">De hele rijschool <em>op één scherm.</em></h2>
+        <p class="lead">Werkt op de telefoon tussen twee lessen door en op de laptop thuis. Ook deze demo is echt klikbaar.</p>
+        <div class="bul"><div><i class="ck ok"></i>Vandaag: lessen, omzet, openstaand, nieuwe aanvragen</div><div><i class="ck ok"></i>Agenda per week met één klik verplaatsen</div><div><i class="ck ok"></i>Aanvragen accepteren, leerlingdossiers, betalingen, pakketten</div><div><i class="ck ok"></i>Boek iets op de website en zie het hier verschijnen</div></div>
+        <div class="ctas"><a class="cta" href="backend/" target="_blank" rel="noopener">Open de backend<svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
+      </div>
+      <div><div class="laptop"><div class="scr"><iframe data-src="backend/" title="Backend demo" loading="lazy"></iframe></div></div><p class="frame-note">Klik door de tabbladen, of open de backend op volledig scherm.</p></div>
+    </div>
+  </div></section>
+
+  <!-- 9 backend modules -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">De backend, module voor module</span><h2 class="h">Alles wat nu in het hoofd van Kas zit, <em>netjes op een rij.</em></h2></div>
+    <div class="tiles">
+      <div class="tile"><i class="ico" data-i="dash"></i><div><b>Vandaag</b><p>Lessen van vandaag, omzet van de maand, openstaande bedragen en wat er net gebeurde.</p></div></div>
+      <div class="tile"><i class="ico" data-i="agenda"></i><div><b>Agenda</b><p>Week- en dagweergave, één instructeur, één motor. Blokkeren, verplaatsen, les afvinken.</p></div></div>
+      <div class="tile"><i class="ico" data-i="inbox"></i><div><b>Aanvragen</b><p>Nieuwe boekingen van de site, al betaald. Eén klik en ze staan in de agenda.</p></div></div>
+      <div class="tile"><i class="ico" data-i="users"></i><div><b>Leerlingen</b><p>Per leerling: voortgang AVB en AVD, lessen, documenten, notities, openstaand bedrag.</p></div></div>
+      <div class="tile"><i class="ico" data-i="card"></i><div><b>Betalingen</b><p>Mollie-overzicht, termijnen, automatische herinneringen, export voor de boekhouder.</p></div></div>
+      <div class="tile"><i class="ico" data-i="tag"></i><div><b>Pakketten en instellingen</b><p>Prijzen, pakketten, beschikbaarheid en de teksten van automatische berichten.</p></div></div>
+    </div>
+  </div></section>
+
+  <!-- 10 leerling -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Voor de leerling</span><h2 class="h">Minder vragen aan Kas, <em>meer vertrouwen bij hen.</em></h2><p class="lead">De meeste appjes zijn dezelfde vragen: wanneer is mijn les, hoeveel uur heb ik nog, wat moet ik nog betalen. Mijn KAS beantwoordt ze voordat ze gesteld worden.</p></div>
+    <div class="tiles four">
+      <div class="tile col"><span class="n">1</span><div><b>Proefles</b><p>Boekt online, betaalt vooruit, krijgt bevestiging en route op WhatsApp.</p></div></div>
+      <div class="tile col"><span class="n">2</span><div><b>AVB-pakket</b><p>Tikt na de proefles op "AVB-pakket starten". € 699 in één keer of in twee termijnen.</p></div></div>
+      <div class="tile col"><span class="n">3</span><div><b>Voortgang</b><p>Ziet na elke les: 6 van 10 uur gehad, Kas noteert "klaar voor examen".</p></div></div>
+      <div class="tile col"><span class="n">4</span><div><b>Geslaagd</b><p>Boekt losse AVD-uren wanneer het uitkomt. Geslaagd? Automatisch een reviewverzoek.</p></div></div>
+    </div>
+  </div></section>
+
+  <!-- 11 resultaat -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Wat het oplevert</span><h2 class="h">Meer leerlingen, minder gedoe, <em>beter overzicht.</em></h2></div>
+    <div class="res">
+      <div class="r"><i class="ico" data-i="search"></i><div><b>Meer aanmeldingen</b><p>Mensen zoeken 's avonds naar "motorrijles Venlo". Nu moeten ze appen en wachten. Straks boeken ze meteen.</p><small>24/7 boekbaar</small></div></div>
+      <div class="r"><i class="ico" data-i="shield"></i><div><b>Minder no-shows</b><p>Betaald vooruit en een herinnering 24 uur vooraf. Een lege lesplek kost nu € 65.</p><small>Herinnering + aanbetaling</small></div></div>
+      <div class="r"><i class="ico" data-i="card"></i><div><b>Geen openstaande betalingen</b><p>iDEAL vooraf of een automatische herinnering. Niemand hoeft achter geld aan te appen.</p><small>Mollie iDEAL</small></div></div>
+      <div class="r"><i class="ico" data-i="build"></i><div><b>Klaar voor het nieuwe pand</b><p>Tweede instructeur of motor erbij? Toevoegen in de backend, de agenda splitst automatisch.</p><small>Groeit mee</small></div></div>
+    </div>
+  </div></section>
+
+  <!-- 12 investering -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Investering</span><h2 class="h">Alles in één keer. <em>Geen abonnement op een tool van een ander.</em></h2></div>
+    <div class="invest">
+      <div class="price"><small>Website + backend + Mijn KAS</small><div class="amt">€ 1.500<span>eenmalig, excl. btw</span></div>
+        <ul class="inc"><li>Website op maat, mobiel eerst</li><li>Online boeken van proefles, AVB en AVD</li><li>Agenda met beschikbaarheid</li><li>iDEAL via Mollie, termijnen</li><li>Leerlingdossier met voortgang</li><li>Automatische bevestigingen en herinneringen</li><li>Mijn KAS leerlingportaal</li><li>Pakketten en tarieven zelf beheren</li><li>Instagram en Google-reviews op de site</li><li>Domein, SSL, vindbaarheid, instructie</li></ul>
+      </div>
+      <div class="side">
+        <div class="sb"><i class="ico" data-i="code"></i><div><b>Alle code is van KAS</b><p>Geen licentie, geen vendor lock-in. De website en backend zijn volledig eigendom van de rijschool.</p></div></div>
+        <div class="sb"><i class="ico" data-i="scale"></i><div><b>Vergelijk</b><p>Een los boekingssysteem kost al snel € 30 tot € 80 per maand, elk jaar opnieuw, en past nooit helemaal bij hoe Kas werkt.</p></div></div>
+        <div class="sb"><i class="ico" data-i="info"></i><div><b>Eerlijk over de rest</b><p>Transactiekosten van Mollie (circa € 0,29 per iDEAL-betaling) gaan rechtstreeks naar Mollie. Wensen buiten dit voorstel stemmen we vooraf af tegen € 70 per uur. Hosting bespreken we samen, zonder verplicht abonnement.</p></div></div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- 13 planning -->
+  <section class="slide"><div class="in">
+    <div class="head"><span class="sec">Planning en volgende stap</span><h2 class="h">Binnen vier weken live.</h2></div>
+    <div class="tl">
+      <div><i>1</i><b>Kick-off</b><p>Stijl, tarieven, beschikbaarheid en teksten van KAS.</p><small>Week 1</small></div>
+      <div><i>2</i><b>Website en boeken</b><p>Ontwerp, bouw en de boekingsflow met iDEAL.</p><small>Week 2</small></div>
+      <div><i>3</i><b>Backend en Mijn KAS</b><p>Agenda, leerlingen, betalingen, automatische berichten.</p><small>Week 3</small></div>
+      <div><i>4</i><b>Testen en live</b><p>Domein overzetten, instructie voor Kas, nazorg.</p><small>Week 4</small></div>
+    </div>
+    <div class="next">
+      <div><b>Akkoord? Dan plannen we de kick-off.</b><p>Een korte bevestiging per e-mail is genoeg. Daarna sturen we de offerte en starten we direct.</p></div>
+      <div class="ctas"><a class="cta" href="mailto:info@minterest.nl?subject=Akkoord%20voorstel%20Rijschool%20KAS">info@minterest.nl</a><a class="cta ghost" href="https://minterest.nl" target="_blank" rel="noopener">minterest.nl</a></div>
+    </div>
+    <p class="lead" style="font-size:13px;color:var(--faint)">Demo-gegevens (leerlingen, betalingen, reviews) zijn fictief en dienen alleen ter illustratie.</p>
+  </div></section>
+
+  </main>
+
+  <footer class="nav">
+    <button class="nbtn lt" id="prev"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Vorige</span></button>
+    <div class="dots" id="dots"></div>
+    <button class="nbtn" id="next"><span>Volgende</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </footer>
+</div>
+<script src="deck.js"></script>
+</body>
+</html>
